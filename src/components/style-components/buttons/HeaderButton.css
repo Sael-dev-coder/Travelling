@@ -1,0 +1,40 @@
+.header-buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Espacio entre los botones */
+}
+
+.explore-button {
+  background-color: #407b9e; /* Color de fondo */
+  color: white; /* Color del texto */
+  border: none;
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 15px 25px; /* Espaciado interno */
+  font-size:1.2rem; /* Tamaño de fuente */
+  font-family: var(--font-Onest,); /* Fuente */
+    font-weight: 600; /* Peso de la fuente */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.explore-button:hover {
+  background-color: #356680; /* Color al pasar el mouse */
+}
+
+.destination-button {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Espacio entre el ícono y el texto */
+  color: #8F95A3; /* Color del texto */
+  font-size: 1rem; /* Tamaño de fuente */
+  font-weight: 600;
+  font-family: var(--font-Onest, sans-serif); /* Fuente */
+  cursor: pointer;
+}
+.Destination{
+  margin-top: 6px;
+}
+
+.destination-button box-icon {
+  font-size: 1.5rem; /* Tamaño del ícono */
+}

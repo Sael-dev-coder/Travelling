@@ -1,0 +1,61 @@
+.Navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Asegura que los elementos se distribuyan */
+  padding: 15px 20px;
+  height: 60px;
+  position: relative; /* Necesario para posicionar el logo */
+}
+
+.logo {
+  width: 20vh;
+  max-width: 150px; /* Limita el ancho máximo del logo */
+  position: absolute;
+  top: 50%; /* Centra verticalmente */
+  transform: translateY(-50%); /* Ajusta el centrado */
+  left: 20px; /* Ajusta la posición horizontal */
+}
+
+.NavList {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: auto; /* Centra el NavList dentro del Navbar */
+}
+
+.NavItem {
+  font-family: var(--font-Poppins);
+  padding: 0 20px;
+}
+.MenuButton {
+  display: none; /* Oculta el botón de menú por defecto */
+}
+@media (max-width: 838px) {
+  .logo {
+    width: 15vh;
+  }
+  .NavItem {
+    padding: 0 10px;
+    font-size: small;
+  }
+}
+@media (max-width: 605px) {
+  .logo {
+    width: 10vh;
+  }
+  .NavItem {
+    padding: 0 5px;
+    font-size: x-small;
+  }
+}
+@media (max-width: 480px) {
+  .logo {
+    width: 13vh;
+  }
+  .NavList{
+    display: none;
+  }
+  .MenuButton{
+    display: block; /* Muestra el botón de menú en pantallas pequeñas */
+  }
+}

@@ -1,0 +1,43 @@
+.container {
+  display: flex; /* Usamos Flexbox para dividir el contenido */
+  justify-content: space-between; /* Espacio entre el texto y la imagen */
+  align-items: center; /* Alinea verticalmente los elementos */
+  height: 90vh; /* Ocupa toda la altura de la ventana */
+  padding: 0 5%; /* Añade un poco de espacio a los lados */
+}
+
+.containerUno {
+  flex: 1; /* Ocupa el espacio disponible */
+  max-width: 50%; /* Limita el ancho máximo al 50% */
+  width: 480px; /* Ancho fijo para el contenedor del texto */
+}
+
+.headerText {
+  text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.title {
+  margin-top: 0%;
+  font-size: 4rem; /* Tamaño grande para el título */
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.description {
+  width: 450px; /* Ancho fijo para la descripción */
+  font-size: 1.2rem; /* Tamaño más pequeño para la descripción */
+  color: #8F95A3; /* Color gris para el texto */
+}
+
+.containerDos {
+  flex: 1; /* Ocupa el espacio disponible */
+  max-width: 50%; /* Limita el ancho máximo al 50% */
+  display: flex;
+  justify-content: center; /* Centra la imagen horizontalmente */
+}
+
+.headerImage {
+  max-width: 100%; /* La imagen no excederá el ancho del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+  border-radius: 10px; /* Bordes redondeados para la imagen */
+}
