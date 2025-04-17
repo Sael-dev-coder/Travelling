@@ -4,40 +4,80 @@
   align-items: center; /* Alinea verticalmente los elementos */
   height: 90vh; /* Ocupa toda la altura de la ventana */
   padding: 0 5%; /* Añade un poco de espacio a los lados */
+  margin-bottom: clamp(20vh, 0vh, 0px); /* Espacio en la parte inferior */
 }
 
 .containerUno {
-  flex: 1; /* Ocupa el espacio disponible */
-  max-width: 50%; /* Limita el ancho máximo al 50% */
-  width: 480px; /* Ancho fijo para el contenedor del texto */
-}
-
-.headerText {
+  width: 50%; /* Ocupa la mitad de la pantalla */
+  padding-left: clamp(0px, 5vw, 20px); /* Espacio a la izquierda */
   text-align: left; /* Alinea el texto a la izquierda */
 }
 
 .title {
-  margin-top: 0%;
-  font-size: 4rem; /* Tamaño grande para el título */
-  font-weight: bold;
-  margin-bottom: 1rem;
+  font-size: clamp(2.3rem, 4vw, 15rem); /* Tamaño de fuente adaptable */
+  color: #333; /* Color del texto */
+  margin: 0%;
 }
 
 .description {
-  width: 450px; /* Ancho fijo para la descripción */
-  font-size: 1.2rem; /* Tamaño más pequeño para la descripción */
-  color: #8F95A3; /* Color gris para el texto */
+  width: clamp(340px, 55%, 900px); /* Ancho adaptable */
+  font-size: clamp(90%, 1vw, 3rem); /* Tamaño de fuente adaptable */
+  color: #666; /* Color del texto */
+  margin-bottom: 20px; /* Espacio debajo de la descripción */
 }
 
 .containerDos {
-  flex: 1; /* Ocupa el espacio disponible */
-  max-width: 50%; /* Limita el ancho máximo al 50% */
-  display: flex;
-  justify-content: center; /* Centra la imagen horizontalmente */
+  width: 50%; /* Ocupa la mitad de la pantalla */
+  display: flex; /* Usamos Flexbox para centrar la imagen */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
 }
 
 .headerImage {
-  max-width: 100%; /* La imagen no excederá el ancho del contenedor */
-  height: auto; /* Mantiene la proporción de la imagen */
-  border-radius: 10px; /* Bordes redondeados para la imagen */
+  width: clamp(250px, 85%, 10000px); /* Ancho adaptable */
+}
+.headerImageDos {
+  display: none;
+}
+
+@media (max-width: 835px) {
+  .container {
+    flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+    height: auto; /* Altura automática */
+  }
+  .containerUno {
+    width: 100%; /* Ocupa todo el ancho */
+    padding: 0; /* Sin padding */
+    display: flex;
+    text-align: center; /* Centra el texto */
+    align-items: center; /* Centra horizontalmente */
+    flex-direction: column; /* Cambia a columna */
+  }
+  .headerImage {
+    display: none;
+  }
+  .headerImageDos {
+    display: block;
+    border-radius: 21px;
+    margin-top: 3vh;
+    width: clamp(300px, 50%, 400px); /* Ancho adaptable */
+  }
+}
+@media (min-width: 400px) and (max-width: 480px) {
+  .headerImageDos {
+    margin: 20% 0%;
+    width: 400px; /* Ancho adaptable */
+  }
+}
+@media (min-width: 600px) {
+  .headerImageDos {
+    margin: 15% 0%;
+    width: 400px; /* Ancho adaptable */
+  }
+}
+@media (min-width: 810px) {
+  .headerImageDos {
+    margin: 10% 0%;
+    width: 700px; /* Ancho adaptable */
+  }
 }
