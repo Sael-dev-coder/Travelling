@@ -1,0 +1,46 @@
+.carousel-container {
+  width: 100%;
+  padding: 20px 0;
+  overflow: hidden;
+}
+
+.cards-carousel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  padding: 10px;
+}
+
+/* Ocultar scrollbar pero mantener funcionalidad */
+.cards-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.cards-carousel {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Hacer que las cards se ajusten al scroll */
+.card {
+  scroll-snap-align: start;
+  flex: 0 0 auto;
+}
+
+/* Media queries para diferentes dispositivos */
+@media (max-width: 768px) {
+  .cards-carousel {
+    gap: 15px;
+    padding: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cards-carousel {
+    gap: 10px;
+    padding: 5px;
+  }
+}

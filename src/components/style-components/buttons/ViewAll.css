@@ -1,0 +1,13 @@
+.viewAllContainer {
+  display: flex;
+  margin: 0 auto;
+  background-color: transparent;
+  border: none;
+  font-weight: 700;
+  font-size: medium;
+  color: var(--backgraund-Sky-Blue);
+  font-family: var(--font-poppins);
+}
+.arrow {
+    margin: auto 5px;
+}

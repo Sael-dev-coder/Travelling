@@ -1,5 +1,6 @@
 import React from "react";
 import "../style-components/cards/Card.css";
+import "boxicons";
 
 function Card({ image, title, location, price, rating, reviews, days }) {
   return (
@@ -12,7 +13,7 @@ function Card({ image, title, location, price, rating, reviews, days }) {
         </p>
         <p className="card-price">${price}</p>
         <div className="card-rating">
-          <span className="star">★</span> {rating} ({reviews})
+          <span className="star"><box-icon className='starIcon' name='star' type='solid' color='#ffbfa0'  ></box-icon></span> {rating} ({reviews})
         </div>
         <p className="card-days">
           <i className="bx bx-calendar"></i> {days}

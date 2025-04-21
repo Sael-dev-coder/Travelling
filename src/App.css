@@ -63,13 +63,8 @@
     width: clamp(300px, 50%, 400px); /* Ancho adaptable */
   }
 }
-@media (min-width: 400px) and (max-width: 480px) {
-  .headerImageDos {
-    margin: 20% 0%;
-    width: 400px; /* Ancho adaptable */
-  }
-}
-@media (min-width: 600px) {
+
+@media (min-width: 608px) {
   .headerImageDos {
     margin: 15% 0%;
     width: 400px; /* Ancho adaptable */
@@ -80,4 +75,59 @@
     margin: 10% 0%;
     width: 700px; /* Ancho adaptable */
   }
+}
+/* parte del section de Best our offer */
+.hotOffers{
+  height: 90vh;
+}
+.hotOffersContainer{
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;;
+}
+.hotOffersText{
+  width: clamp(200px, 55%, 900px); /* Ancho adaptable */
+}
+.Offers{
+color: var(--backgraund-peach);
+font-family: var(--font-Onest);
+font-weight: 500;
+font-size: clamp(1.2rem, 2vw, 1.3rem); /* Tamaño de fuente adaptable */
+margin: 0%;
+}
+.BestOffer{
+  font-size: clamp(1.5rem, 3vw, 5rem); /* Tamaño de fuente adaptable */
+  font-family: var(--font-Onest);
+  margin: 0%;
+  font-weight: 700;
+}
+.cardContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 5%;
+  gap: 20px;
+}
+.descriptionOffers{
+  width: clamp(300px, 55%, 900px); /* Ancho adaptable */
+  font-size: clamp(0.6rem, 1vw, 1.5rem); /* Tamaño de fuente adaptable */
+  color: #666; /* Color del texto */
+  margin-bottom: 20px; /* Espacio debajo de la descripción */
+}
+@media (max-width: 540px) {
+  .hotOffersContainer {
+    flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+    height: auto; /* Altura automática */
+  }
+  .hotOffersText {
+    width: 100%; /* Ocupa todo el ancho */
+    padding: 0; /* Sin padding */
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column; /* Cambia a columna */
+  }
+  
 }
